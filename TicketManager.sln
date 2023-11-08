@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticket.Domain", "Ticket.Domain\Ticket.Domain.csproj", "{6C3F8949-1748-4887-BDBD-2B0400018AD2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ticket", "Ticket", "{F86F4C27-5F54-47C9-A92C-D726444C0F86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticket.Application", "Ticket.Application\Ticket.Application.csproj", "{59A9D1AA-B86D-4C57-A330-72AD0B7961AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticket.Infrastructure", "Ticket.Infrastructure\Ticket.Infrastructure.csproj", "{B5E3B208-1589-4262-BA60-BAAE080217F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticket.WebApi", "Ticket.WebApi\Ticket.WebApi.csproj", "{7F27F7C4-4758-4BC5-9321-4DAC85564003}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{9A009153-D86F-4E24-985E-3998B5FBE9FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Domain", "Common.Domain\Common.Domain.csproj", "{75DF4DBE-5EA6-46BD-8E7B-50FD82F997FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infrastructure", "Common.Infrastructure\Common.Infrastructure.csproj", "{8B0772A1-E34E-499A-B608-679F845C9E25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C3F8949-1748-4887-BDBD-2B0400018AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C3F8949-1748-4887-BDBD-2B0400018AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C3F8949-1748-4887-BDBD-2B0400018AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C3F8949-1748-4887-BDBD-2B0400018AD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59A9D1AA-B86D-4C57-A330-72AD0B7961AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59A9D1AA-B86D-4C57-A330-72AD0B7961AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59A9D1AA-B86D-4C57-A330-72AD0B7961AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59A9D1AA-B86D-4C57-A330-72AD0B7961AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5E3B208-1589-4262-BA60-BAAE080217F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5E3B208-1589-4262-BA60-BAAE080217F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5E3B208-1589-4262-BA60-BAAE080217F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5E3B208-1589-4262-BA60-BAAE080217F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F27F7C4-4758-4BC5-9321-4DAC85564003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F27F7C4-4758-4BC5-9321-4DAC85564003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F27F7C4-4758-4BC5-9321-4DAC85564003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F27F7C4-4758-4BC5-9321-4DAC85564003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75DF4DBE-5EA6-46BD-8E7B-50FD82F997FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75DF4DBE-5EA6-46BD-8E7B-50FD82F997FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75DF4DBE-5EA6-46BD-8E7B-50FD82F997FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75DF4DBE-5EA6-46BD-8E7B-50FD82F997FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B0772A1-E34E-499A-B608-679F845C9E25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B0772A1-E34E-499A-B608-679F845C9E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B0772A1-E34E-499A-B608-679F845C9E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B0772A1-E34E-499A-B608-679F845C9E25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6C3F8949-1748-4887-BDBD-2B0400018AD2} = {F86F4C27-5F54-47C9-A92C-D726444C0F86}
+		{59A9D1AA-B86D-4C57-A330-72AD0B7961AE} = {F86F4C27-5F54-47C9-A92C-D726444C0F86}
+		{B5E3B208-1589-4262-BA60-BAAE080217F0} = {F86F4C27-5F54-47C9-A92C-D726444C0F86}
+		{7F27F7C4-4758-4BC5-9321-4DAC85564003} = {F86F4C27-5F54-47C9-A92C-D726444C0F86}
+		{75DF4DBE-5EA6-46BD-8E7B-50FD82F997FB} = {9A009153-D86F-4E24-985E-3998B5FBE9FC}
+		{8B0772A1-E34E-499A-B608-679F845C9E25} = {9A009153-D86F-4E24-985E-3998B5FBE9FC}
+	EndGlobalSection
+EndGlobal
