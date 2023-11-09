@@ -4,7 +4,7 @@ using Ticket.Domain.Repositories;
 
 namespace Ticket.Application.Create;
 
-public class CreateTicketCommandHandler : ICommandHandler<CreateTicketCommand>
+public class CreateTicketCommandHandler : ICommandHandler
 {
     private readonly ITicketRepository _ticketRepository;
 
@@ -12,16 +12,22 @@ public class CreateTicketCommandHandler : ICommandHandler<CreateTicketCommand>
     {
         _ticketRepository = ticketRepository;
     }
-    
-    public async void Handle(CreateTicketCommand command)
+
+    public Type SubscribedTo()
     {
+        return typeof(CreateTicketCommand);
+    }
+
+    public async Task Handle(Command command)
+    {
+        var createTicketCommand = (CreateTicketCommand)command;
         var ticket = new Domain.Entities.Ticket
         {
-            Id = command.Id,
+            Id = createTicketCommand.Id,
             CreatedAt = DateTime.Now,
-            Author = command.Author,
-            Type = command.Type,
-            Message = command.Message
+            Author = createTicketCommand.Author,
+            Type = createTicketCommand.Type,
+            Message = createTicketCommand.Message
         };
         await _ticketRepository.Save(ticket);
     }

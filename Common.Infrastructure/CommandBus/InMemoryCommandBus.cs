@@ -1,6 +1,7 @@
-﻿using Common.Domain;
+﻿using Common.Infrastructure.CommandBus;
+using Common.Domain;
 
-namespace Comman.Infrastructure.CommandBus;
+namespace Common.Infrastructure.CommandBus;
 
 public class InMemoryCommandBus : ICommandBus
 {
@@ -11,9 +12,9 @@ public class InMemoryCommandBus : ICommandBus
         _commandHandlers = commandHandlers;
     }
 
-    public void Dispatch(Command command)
+    public async Task Dispatch(Command command)
     {
         var handler = _commandHandlers.Get(command);
-        handler.Handle(command);
+        await handler.Handle(command);
     }
 }

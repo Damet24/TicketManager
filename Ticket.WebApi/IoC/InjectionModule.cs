@@ -14,11 +14,16 @@ public abstract class InjectionModule : Module
     protected override void Load(ContainerBuilder builder)
     {
         PopulateClients(builder);
+        PopulateCommands(builder);
         PopulateRepositories(builder);
         PopulateServices(builder);
     }
 
     protected virtual void PopulateClients(ContainerBuilder builder)
+    {
+    }
+    
+    protected virtual void PopulateCommands(ContainerBuilder builder)
     {
     }
 

@@ -2,5 +2,5 @@
 
 public interface ICommandBus
 {
-    public void Dispatch(Command command);
+    public Task Dispatch(Command command);
 }

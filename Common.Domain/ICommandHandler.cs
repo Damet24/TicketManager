@@ -1,6 +1,7 @@
 ﻿namespace Common.Domain;
 
-public interface ICommandHandler<T>
+public interface ICommandHandler
 {
-    public void Handle(T command);
+    public Type SubscribedTo();
+    public Task Handle(Command command);
 }

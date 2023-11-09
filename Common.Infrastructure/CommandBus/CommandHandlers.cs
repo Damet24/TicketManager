@@ -1,23 +1,23 @@
 ﻿using Common.Domain;
 using Common.Domain.Exceptions;
 
-namespace Comman.Infrastructure.CommandBus;
+namespace Common.Infrastructure.CommandBus;
 
 public class CommandHandlers
 {
-    private Dictionary<Type, ICommandHandler<Command>> Handlers = new();
+    private readonly Dictionary<Type, ICommandHandler> _handlers = new();
     
-    public CommandHandlers(IEnumerable<ICommandHandler<Command>> commandHandlers)
+    public CommandHandlers(IEnumerable<ICommandHandler> commandHandlers)
     {
         foreach (var commandHandler in commandHandlers)
         {
-            Handlers.Add(commandHandler.GetType(), commandHandler);
+            _handlers.Add(commandHandler.SubscribedTo(), commandHandler);
         }
     }
 
-    public ICommandHandler<Command> Get(Command command)
+    public ICommandHandler Get(Command command)
     {
-        var commandHandler = Handlers[command.GetType()];
+        var commandHandler = _handlers[command.GetType()];
         if (commandHandler == null)
             throw new CommandNotRegisteredException(command);
         return commandHandler;

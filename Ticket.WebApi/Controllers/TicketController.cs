@@ -1,7 +1,6 @@
 ﻿using Common.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Ticket.Domain.Entities;
-using Ticket.Domain.Enums;
 using Ticket.Infrastructure.Dtos.Request;
 
 namespace Ticket.WebApi.Controllers;
@@ -18,7 +17,7 @@ public class TicketController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult CreateTicket([FromBody] TicketRequest request)
+    public async Task<IActionResult> CreateTicket([FromBody] TicketRequest request)
     {
         var command = new CreateTicketCommand
         {
@@ -26,7 +25,7 @@ public class TicketController : ControllerBase
             Type = request.Type,
             Message = request.Message
         };
-        _commandBus.Dispatch(command);
+        await _commandBus.Dispatch(command);
         return Created("", null);
     }
 }
